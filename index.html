@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset='utf-8' />
+        
+        
+          <title>
+            Bootstrap 4 theme - Demos | FullCalendar
+          </title>
+        
+        
+        
+        
+        
+        
+        <link href='demo-topbar.css' rel='stylesheet' />
+        
+        <link href='fullcalendar.min.css' rel='stylesheet' />
+        <link href='fullcalendar.print.css' rel='stylesheet' media='print' />
+        
+        
+        
+        <script src='moment.min.js'></script>
+        <script src='jquery.min.js'></script>
+        <script src='fullcalendar.min.js'></script>
+        
+        
+        
+        
+        
+        
+        
+        <script src='/assets/demo-to-codepen.js'></script>
+        
+        
+        <style>
+        
+          html, body {
+            margin: 0;
+            padding: 0;
+            font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+            font-size: 14px;
+          }
+        
+          #calendar {
+            max-width: 900px;
+            margin: 40px auto;
+          }
+        
+        </style>
+        
+        <link rel="stylesheet" href="style.css">
+        <link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet' />
+        <script>
+        
+          $(function() {
+        
+            $('#calendar').fullCalendar({
+              themeSystem: 'bootstrap4',
+              header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay,listMonth'
+              },
+              weekNumbers: true,
+              eventLimit: true, // allow "more" link when too many events
+              events: 'https://fullcalendar.io/demo-events.json'
+            });
+        
+          });
+        
+        </script>
+        
+        </head>
+
+<body class="d-flex align-items-start flex-column">
+  
+  <!-- Nav Bar -->
+    <nav class="w-100 navbar align-self-start sticky-top navbar-expand-lg navbar-dark" style="background-color:#0F81E8">
+      <div>
+        <img class="navbar-brand" src="img/350-Austin_logo.png" alt="350-Austin">
+        <a class="navbar-brand" href=""></a>
+      </div>
+      <!-- dropdown -->
+      <ul class="removed mr-auto navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            More Information
+          </a>
+          <div id="sections" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#product-info">Product Information</a>
+            <a class="dropdown-item" href="#similar-items">Similar Items</a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Search  -->
+      <form class="removed form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn my-2 my-sm-0" type="submit">Search</button>
+      </form>
+
+      <!-- Newsletter Sign up & Cart -->
+      <ul class="ml-2 navbar-nav">
+        <li class="removed nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#signUpModal" href="">
+            <i class="fas fa-user"></i> Sign Up For Our Newsletter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+            
+          </a>
+        </li>
+      </ul>
+    </nav>
+  <!-- Main Content -->
+
+  <!-- <div id='calendar'></div> -->
+
+  <main class="container">
+
+
+ 
+
+  
+
+    <!-- Scrollspy connected to Dropdown Menu -->
+    <div data-spy="scroll" data-target="#sections" data-offset="0">
+
+      <!-- Product Information -->
+      <div class="row"> 
+        <div class="col-12">
+          <h3 id="product-info" class="section-header">About Our Meetings.</h3>
+
+          <!-- Tab navigation -->
+          <nav class="nav product-info justify-content-around" id="myTab" role="tablist">
+            <a class="nav-item nav-link active" id="home-tab" data-toggle="tab" href="#description" role="tab" aria-controls="home" aria-selected="true">Description</a>
+            <a class="nav-item nav-link" id="profile-tab" data-toggle="tab" href="#details" role="tab" aria-controls="profile" aria-selected="false">Meeting Details</a>
+          </nav>
+
+          <!-- Tab Content -->
+          <div class="tab-content mt-1" id="myTabContent">
+            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="home-tab">This graceful unicorn will prance right into any child’s collection -- and heart! With its pretty pink mane and
+              tail, both scattered through with shimmering silver strands that catch the light, this enchanting friend is
+              sure to become a new favorite. Additional irresistible details include super-silky plush fur, satin star decorations,
+              beautiful blue eyes, and a soft, shiny horn.</div>
+            <div class="tab-pane fade" id="details" role="tabpanel" aria-labelledby="profile-tab">
+              <ul>
+                <li>Suitable for ages 3 years and up</li>
+                <li>Silky plush fur</li>
+                <li>Measure 36" H</li>
+                <li>Imported</li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Past Events -->
+      <div class="row">
+        <div class="col-12">
+          <h4 id="similar-items" class="section-header">Our Past Events!</h4>
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <a href="">
+                <img class="rec-item" src="img/recommendedProduct1.png" alt="">
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="">
+                <img class="rec-item" src="img/recommendedProduct2.png" alt="">
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="">
+                <img class="rec-item" src="img/recommendedProduct3.png" alt="">
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a href="">
+                <img class="rec-item" src="img/recommendedProduct4.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Chat Button with Popover-->
+  <button id="chatPopover" type="button" class="chat btn">Question?</button>
+
+  <!-- Footer -->
+  <footer class="mt-auto d-flex justify-content-center align-items-center">
+   
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalHeader">Monthly News letter Subscription</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <!-- Modal Body - Form -->
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <div id="nameAlert" class="alert" role="alert">
+                Please enter your first name.
+              </div>
+              <input type="text" class="form-control" id="firstName">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName">
+            </div>
+            <div class="form-group">
+              <label for="eMail">E-mail</label>
+              <div id="emailAlert" class="alert" role="alert">
+                Please enter an e-mail address.
+              </div>
+              <input type="email" class="form-control" id="eMail">
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer - Button -->
+        <div class="modal-footer">
+          <button type="button" id="signUpBtn" class="btn">Questions?</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script> -->
+
+    
+  <!-- <script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script> -->
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
